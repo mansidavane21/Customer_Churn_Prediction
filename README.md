@@ -5,79 +5,176 @@
   <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
 </p>
-📉 Customer Churn Prediction (Telecom) — End-to-End ML Web App
 
-End-to-end machine learning web application using Streamlit to predict telecom customer churn. Supports single & bulk predictions via CSV upload, and includes interactive dashboards for churn patterns, key metrics, and insights. UI features a modern, clean design with tech badges, animated cards, and a deployment-ready layout.
+# 📉 Customer Churn Prediction (Telecom) — End-to-End ML Web App
 
-GitHub
+**Customer Churn Prediction** is an end-to-end machine learning web application built with **Streamlit** to predict telecom customer churn. The app supports **single and bulk predictions** via CSV uploads and provides interactive dashboards for **churn patterns, key metrics, and actionable insights**.
 
-🎯 Why this Project?
-Businesses — especially in telecom and subscription services — often struggle to retain customers. Predicting which customers are likely to churn helps in:
-* Identifying high-risk users early
-* Targeting retention campaigns
-* Reducing revenue loss and improving customer lifetime value
+---
 
-This project demonstrates a full ML pipeline — from data ingestion, preprocessing, model training, to deployment — to predict customer churn and derive actionable insights.
+# 🚀 Project Overview
 
+Telecom businesses face challenges in retaining customers. Early identification of high-risk customers helps in:
 
-🛠️ What’s Inside (Project Highlights)
+* Reducing customer churn
+* Targeting effective retention campaigns
+* Improving revenue and customer lifetime value
 
-✅ Data preprocessing and feature engineering (in train.pipline.py) 
-✅ Model training & saving (using pipeline.pkl) 
-✅ Web interface (App.py) built with Streamlit — for single and bulk prediction, with interactive dashboards and metrics view. 
-✅ Sample dataset included (WA_Fn-UseC_-Telco-Customer-Churn.csv) for testing / demonstration. 
-✅ Requirements file (requirements.txt) for easy setup.
+This project implements a **full ML pipeline**: from data ingestion and preprocessing to model training and deployment via a web application.
 
+---
 
-📁 Repository Structure
+# 🎯 Key Objectives
+
+* Predict which customers are likely to churn
+* Provide **interactive dashboards** with metrics & visualizations
+* Support single and bulk prediction workflows
+* Deploy a **user-friendly Streamlit app** for real-time usage
+* Maintain a modular and scalable ML pipeline
+
+---
+
+# 🛠️ Project Highlights
+
+### **1️⃣ Data Preprocessing & Feature Engineering**
+
+* Handles missing values, categorical encoding, and scaling
+* Generates ready-to-train datasets using `train.pipline.py`
+* Stores preprocessing logic in a pipeline for deployment
+
+### **2️⃣ Machine Learning Model**
+
+* Single pipeline (`pipeline.pkl`) integrates preprocessing and model
+* Trained to classify customer churn (Yes/No)
+* Modular and reusable for predictions
+
+### **3️⃣ Streamlit Web App**
+
+* Input form for single customer prediction
+* Bulk prediction via CSV upload
+* Dashboard with churn distribution, key metrics, and visual insights
+* Real-time model prediction feedback
+
+---
+
+# 📁 Project Structure
+
+```
 Customer_Churn_Prediction/
 │
 ├── WA_Fn-UseC_-Telco-Customer-Churn.csv   # Sample telecom churn dataset  
-├── train.pipline.py                        # Data preprocessing + training script  
-├── pipeline.pkl                            # Serialized trained model & preprocessing pipeline  
-├── App.py                                  # Streamlit app for prediction & dashboard  
+├── train.pipline.py                        # Data preprocessing & training script  
+├── pipeline.pkl                            # Serialized trained ML pipeline  
+├── App.py                                  # Streamlit app for predictions & dashboard  
 ├── requirements.txt                        # Python dependencies  
-└── README.md                               # README (this file)  
+└── README.md                               # This README file  
+```
 
+---
 
-⚙️ Setup & Usage
-1. Clone the repository
+# 🖥️ Setup & Installation
+
+### **1️⃣ Clone Repository**
+
+```bash
 git clone https://github.com/mansidavane21/Customer_Churn_Prediction.git
 cd Customer_Churn_Prediction
+```
 
-2. Install dependencies
+### **2️⃣ Install Dependencies**
+
+```bash
 pip install -r requirements.txt
+```
 
-3. Run the Streamlit App
+### **3️⃣ Run the Streamlit App**
+
+```bash
 streamlit run App.py
+```
 
+Open the local URL (default: `http://localhost:8501`) in your browser.
 
-The app will open in your browser (usually at http://localhost:8501).
-You can:
-Upload a single customer’s data for immediate churn prediction
-Upload a CSV file for bulk predictions
-Explore dashboards showing churn distribution, key metrics, visualizations, and insights
+---
 
+# 📌 Example Prediction
 
-📈 How It Works (Brief Workflow)
+### **Single Input Example**
 
-1. Load dataset (or user-provided data)
-2. Preprocess data (cleaning, encoding, scaling, feature engineering)
-3. Use trained ML pipeline (pipeline.pkl) to predict churn probability
-4. Present results in a user-friendly UI — show prediction, summary metrics, and visual dashboards
-5. Support both single and bulk predictions
+| Feature        | Value     |
+| -------------- | --------- |
+| Gender         | Male      |
+| SeniorCitizen  | 0         |
+| Tenure         | 12 months |
+| MonthlyCharges | 70.5      |
+| TotalCharges   | 845       |
 
+### **Output**
 
-✅ Future Enhancements (Roadmap)
+* **Churn Probability:** 23%
+* **Prediction:** No Churn
 
-* Add model comparison (e.g. Random Forest, XGBoost) and show performance metrics/ranking
-* Add threshold tuning & explainability (e.g. SHAP / feature importance)
-* Add user authentication & database support to store predictions/history
-* Provide deployment scripts (Docker / Heroku / AWS) for one-click deployment
-* Improve UI with more visualizations (cohort analysis, retention trends, etc.)
+---
 
+# 📈 ML Pipeline (Workflow)
 
-👤 About / Author
+1. Load dataset (CSV)
+2. Preprocess features (cleaning, encoding, scaling)
+3. Split train/test sets
+4. Train ML model (e.g., Logistic Regression / Random Forest)
+5. Serialize model + pipeline (`pipeline.pkl`)
+6. Deploy via Streamlit app
+7. Support single & bulk predictions
 
-Mansi Davane — Data Science student & developer (B.Tech, Data Science)
-This project is part of my portfolio showcasing real-world usage of data science + web app deployment.
+---
+
+# 🔮 Future Enhancements
+
+* Add model comparison (Random Forest, XGBoost, etc.)
+* Feature explainability (SHAP / feature importance)
+* User authentication & database support
+* Deployment scripts (Docker / Heroku / AWS)
+* Advanced dashboards: cohort analysis, retention trends
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+**Steps:**
+
+1. Fork the repository
+2. Create a new branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push and create a Pull Request
+
+Follow **PEP8 coding standards** for all contributions.
+
+---
+
+# 🙏 Acknowledgements
+
+* **Streamlit** — Web app framework
+* **Scikit-learn** — Machine Learning
+* **Pandas / NumPy** — Data processing
+* **Matplotlib / Seaborn** — Visualization
+
+---
+
+# 👤 Author
+
+**Mansi Davane** — Data Science student & developer (B.Tech, Data Science)
+This project is part of my portfolio demonstrating **real-world ML deployment in web apps**.
+
+---
